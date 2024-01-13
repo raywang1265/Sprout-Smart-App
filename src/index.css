@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,500;1,700;1,900&display=swap');
+
+* {
+  font-family: 'DM Sans';
+}
+
+body {
+  margin: 0;
+  
+}
+
+p {
+  margin-block: 0;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: 400px 1fr;
+
+  row-gap: 24px;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .sidebar {
+  width: 250px;
+  height: 100vh;
+  grid-row: 1 / 3;
+
+  background-color: #14532d;
+} */
+
+.header {
+  height: 400px;
+  width: 100%;
+
+  background-color: #EEF9E7;
+
+  font-family: 'DM Sans';
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.header .container {
+  padding-left: 40px;
+  padding-top: 30px;
+
+}
+
+.header .title {
+  font-weight: 700;
+  font-size: 70px;
+
+  
+
+
+}
+
+.header-module {
+  width: 500px;
+  height: 350px;
+
+  background-color: #14532d;
+  border-radius: 20px;
+  color: white;
+}
+
+.header-module .container {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar-home {
+  width: 80vw;
+  background-color: #14532d;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  border-radius: 50px;
+  
+}
+
+.navlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  height: 75%;
+  width: 110px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  cursor: pointer;
+  
+}
+
+.navlink.selected {
+  background-color: white;
+  border-radius: 20px;
+  
+}
+
+.navicon {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 2px;
+
+
+}
+
+.navlink p {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  margin-block: 1em;
+
+  color: white;
+}
+
+.navlink.selected p {
+  color: black
+}
