@@ -9,9 +9,12 @@ const Home = () => {
     }
 
     return ( 
-        <div className="homepage">
-            <h1>Home Page</h1>
-            <button onClick={handleLogin}>login</button>
+        <div className="landing-container">
+            <div className="signup-container">
+                <h1>Home Page</h1>
+                <button onClick={handleLogin} className="signup-btn">Get Started</button>
+            </div>
+            
         </div>
      );
 }

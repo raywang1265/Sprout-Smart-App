@@ -13,6 +13,31 @@ p {
   margin-block: 0;
 }
 
+/* 
+  Landing Page Styles
+*/
+
+.landing-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+
+}
+
+.signup-container {
+  display: grid;
+  
+
+}
+
+.signup-btn {
+
+}
+
+/* 
+
+*/
+
 .App {
   display: grid;
   grid-template-rows: 400px 1fr;
