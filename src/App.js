@@ -1,14 +1,18 @@
-import Header from "./Header";
-import Navbar from "./Navbar";
+import Home from "./Home";
+import DashBoard from "./DashBoard";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      
-      <div className="main">
-        <Navbar />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />}>
+          <Route exact path = "/dashboard" element = {<DashBoard />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div> 
   );
 }
