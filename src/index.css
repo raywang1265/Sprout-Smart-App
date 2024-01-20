@@ -21,7 +21,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
-
+  margin-left: 10px;
 }
 
 .signup-container {
@@ -108,15 +108,14 @@ p {
 }
 
 .navbar-home {
-  width: 80vw;
+  /* width: 80vw; */
+  padding-left: 30%;
+  padding-right: 30%;
   background-color: #14532d;
-
+  margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  
-  border-radius: 50px;
-  
 }
 
 .navlink {

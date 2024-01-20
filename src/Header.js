@@ -24,7 +24,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="container">
-                <p className="title">
+                <p className="h1 display-1"> {/* className was "title", but now using bootstrap css instead as a test */}
                     Welcome {userName}
                 </p>
                 <p>

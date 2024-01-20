@@ -5,10 +5,8 @@ const DashBoard = () => {
 
     return ( 
         <div className="DashBoard">
+            <Navbar />
             <Header />
-            <div className = "navbar">
-                <Navbar />
-            </div>
         </div>
      );
 }
