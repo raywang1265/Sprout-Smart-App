@@ -14,7 +14,7 @@ const firebaseConfig = {
     messagingSenderId: "951472339723",
     appId: "1:951472339723:web:67a995180ed1b2bb38400e",
     measurementId: "G-9GT0QGG7HC"
-  };
+};
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
@@ -33,29 +33,31 @@ const Home = () => {
 
     useEffect(() => {
         getRedirectResult(auth)
-        .then((result) => {
-            credential = GoogleAuthProvider.credentialFromResult(result);
-            token = credential.accessToken;
-            user = result.user;
-            console.log(user.uid);
-            navigate("/dashboard");
-    
-        }).catch((error) => {
-            const errorMessage = error.message;
-            console.log(errorMessage);
-        });
+            .then((result) => {
+                credential = GoogleAuthProvider.credentialFromResult(result);
+                token = credential.accessToken;
+                user = result.user;
+                console.log(user.uid);
+                navigate("/dashboard");
+
+            }).catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+            });
     });
 
-    return ( 
-        <div className="landing-container">
-            <div className="signup-container">
-                <h1>Home Page</h1>
-                <button onClick={handleLogin} className="signup-btn">Get Started</button>
-            </div>
-            
+    return (
+        // <div className="landing-container">
+        //     <div className="signup-container">
+        //         <h1>Home Page</h1>
+        //         <button onClick={handleLogin} className="signup-btn">Get Started</button>
+        //     </div>
+        // </div>
+        <div className="signup-container">
+            <h1>Sprout Smart</h1>
+            <button onClick={handleLogin} className="signup-btn">Get Started</button>
         </div>
-     );
+    );
 }
-
 
 export default Home;
