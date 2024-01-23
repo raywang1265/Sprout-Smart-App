@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 
 const Header = () => {
     const navigate = useNavigate();
-      
+    
 
     const handleLogout = () => {
         signOut(auth).then(() => {
@@ -17,28 +17,18 @@ const Header = () => {
             console.log(error);
           });
     }
-    const userName = auth.currentUser.displayName;
-    const uid = auth.currentUser.uid;
-    const userPhoto = auth.currentUser.photoURL;
+    // const userName = auth.currentUser.displayName;
+    // const uid = auth.currentUser.uid;
+    // const userPhoto = auth.currentUser.photoURL;
 
     return (
         <div className="header">
-            <div className="container">
-                <p className="h1 display-1"> {/* className was "title", but now using bootstrap css instead as a test */}
-                    Welcome {userName}
-                </p>
-                <p>
-                     Another Message 
-                </p>
-                <p>
-                     Maybe the time
-                </p>
+            <div className="title-message">
+                <p>Nice to see you again, </p>
+            </div>
+            <div className="header-dashboard">
                 <button onClick={handleLogout}>logout</button>
             </div>
-            <div className="centered-container">
-                <HeaderModule />
-            </div>
-            
         </div>
     );
 }

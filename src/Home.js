@@ -3,9 +3,6 @@ import { initializeApp } from "firebase/app";
 import React, { useState, useEffect } from 'react';
 import { getAuth, signInWithRedirect, GoogleAuthProvider, getRedirectResult } from "firebase/auth";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
 const firebaseConfig = {
     apiKey: "AIzaSyCWoJfMU1i_i6tzK9VdME3dWOy-T_qetWQ",
     authDomain: "sprout-smart-site.firebaseapp.com",
