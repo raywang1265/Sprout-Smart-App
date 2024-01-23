@@ -9,7 +9,7 @@ const DashBoard = () => {
                 <div className="logo">
                     <p>Sprout Smart</p>
                 </div>
-                <Navbar />
+                <Navbar page={"home"}/>
             </div>
 
             <div className="main-container">

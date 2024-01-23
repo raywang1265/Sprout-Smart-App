@@ -118,7 +118,11 @@ p {
   
 }
 
-.navlink {
+.link {
+  text-decoration: none;
+}
+
+.navbar div {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -133,13 +137,26 @@ p {
   margin-right: 15px;
 
   cursor: pointer;
+  color: black;
   
 }
 
-.navlink.selected {
+.selected .navicon{
+  fill: white;
+}
+
+.selected p {
+  color: rgb(255, 255, 255)
+}
+
+#home.selected {
   background-color: #16a34a;
   border-radius: 10px;
-  
+}
+
+#profile.selected {
+  background-color: #16a34a;
+  border-radius: 10px;
 }
 
 .navicon {
@@ -153,20 +170,12 @@ p {
 
 }
 
-.selected .navicon {
-  fill: white;
-}
-
 .navlink p {
   font-family: 'DM Sans';
   font-weight: 700;
   margin-block: 1em;
 
   color: rgb(0, 0, 0);
-}
-
-.navlink.selected p {
-  color: rgb(255, 255, 255)
 }
 
 .header {
