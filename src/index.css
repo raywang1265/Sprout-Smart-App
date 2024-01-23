@@ -178,7 +178,42 @@ p {
 }
 
 .header-dashboard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
   margin-left: auto;
+}
+
+.profilepic {
+  width: 48px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  background-color: #16a34a;
+  border: #16a34a 1px solid;
+
+  height: 40px;
+  width: 100px;
+  /* padding: 6px 18px 6px 18px; */
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.logout-btn p {
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+
+  
 }
 
 .title-message p {

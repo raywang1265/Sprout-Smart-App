@@ -17,6 +17,8 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+
+
 const Home = () => {
 
     const navigate = useNavigate();
@@ -35,6 +37,7 @@ const Home = () => {
                 token = credential.accessToken;
                 user = result.user;
                 console.log(user.uid);
+                
                 navigate("/dashboard");
 
             }).catch((error) => {
