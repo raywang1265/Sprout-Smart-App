@@ -13,6 +13,12 @@ p {
   margin-block: 0;
 }
 
+
+
+.flex {
+  display: flex;
+}
+
 /* 
   Landing Page Styles
 */
@@ -21,31 +27,64 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
+  width: 100vw;
+  height: 100vh;
+
   margin: auto;
   align-items: center;
   justify-content: center;
 }
 
+.landing-text {
+  font-size: 40px;
+  font-weight: 700;
+
+}
+
+.landing-text.green-text {
+  color: #16a34a;
+}
+
+#title {
+  font-size: 48px;
+  font-weight: 900;
+}
+
 .signup-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
   align-items: center;
   justify-content: center;
 }
 
 .signup-btn {
+  background-color: #16a34a;
+  border: #16a34a 2px solid;
+  border-radius: 16px;
+  height: 60px;
+  width: 400px;
 
+  color: white;
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
 }
 
 /* 
 
 */
-
-.App {
-  display: grid;
-  grid-template-rows: 400px 1fr;
-
-  row-gap: 24px;
-}
 
 .centered-container {
   display: flex;
