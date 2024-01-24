@@ -2,12 +2,9 @@ import HeaderModule from "./HeaderModule";
 import { initializeApp } from "firebase/app";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-// import {auth} from "./Home.js";
+import {auth} from "./Home.js";
 import React, { useEffect, useState } from 'react';
 
-
-const auth = getAuth();
-const user = auth.currentUser;
 
 const Header = () => {
     const [userName, setUserName] = useState("User");
@@ -15,13 +12,15 @@ const Header = () => {
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (user !== null) {
-            setUserName(auth.currentUser.displayName);
-            setUserPhoto(user.photoURL);
-        }
-         
-    }, []);
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUserName(user.displayName);
+        setUserPhoto(user.photoURL);
+        console.log(userName);
+      } else {
+
+      }
+    });
     
 
     const handleLogout = () => {
@@ -31,9 +30,6 @@ const Header = () => {
             console.log(error);
           });
     }
-    // const userName = auth.currentUser.displayName;
-    // const uid = auth.currentUser.uid;
-    // const userPhoto = auth.currentUser.photoURL;
  
     return (
         <div className="header">
