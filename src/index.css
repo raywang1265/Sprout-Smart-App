@@ -104,13 +104,12 @@ p {
   Dashboard
 */
 
-.dashboard {
+/* .dashboard {
   display: grid;
   grid-template-columns: 200px 1fr;
-  /* column-gap: 24px; */
 
   height: 100vh
-}
+} */
 
 .sidebar-container {
   background-color:#e2e8f0;
@@ -119,13 +118,17 @@ p {
   display: grid;
   grid-template-rows: 72px 1fr;
   row-gap: 50px;
+  position: fixed;
+  height: 100%;
 }
 
 .main-container {
   
   display: grid;
   grid-template-rows: 100px 1fr;
+  height: 100px;
   row-gap: 24px;
+  margin-left: 200px;
 }
 
 
@@ -150,10 +153,8 @@ p {
   
   gap: 12px;
 
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  
-  
   
 }
 
@@ -302,11 +303,10 @@ p {
   border: #e2e8f0 2px solid;
 }
 
-.module3-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 16px;
-  height: 300px;
+.plants-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .dash-label {
@@ -314,4 +314,83 @@ p {
   font-weight: 600;
 
   margin-bottom: 12px;
+}
+
+/*start of plant module styling*/
+.plant-module-container {
+  display: grid;
+  grid-template-rows: 100px 35px 1fr 1fr 1fr 1fr 20px;
+  height: 400px;
+  width: 400px;
+  border-radius: 25px;
+  border: #e2e8f0 4px solid;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+.plant-module-header {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 300px 1fr;
+  align-items: center;
+}
+
+.plant-name-type {
+  margin-left: 25px;
+  border-bottom: #e2e8f0 3px solid;
+  height: 75px;
+}
+
+.plant-name{
+  padding-top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.plant-type {
+  font-size: 18px;
+  font-weight: bold;
+  color: #545454;
+}
+
+.flower-icon {
+  width: 80px;
+  padding-top: 20px;
+  justify-self: left;
+}
+
+.plant-age {
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.plant-info-module {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  margin-left: 20px;
+}
+
+.ruler-icon {
+  width: 50px;
+}
+
+.moisture-icon {
+  width: 45px;
+}
+
+.temp-icon {
+  width: 50px;
+}
+
+.watering-icon {
+  width: 50px;
+}
+
+.plant-info-text {
+  font-size: 22px;
+  font-weight: bold;
+  align-self: center;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
